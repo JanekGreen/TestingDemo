@@ -15,6 +15,14 @@ class PersonCreatorTest {
         personCreator = new PersonCreator();
     }
     @Test
+    public void shouldCreatePersonWhenGenderFemaleNameNull(){
+        Person person = personCreator.make(null, "Green", 32, 'F');
+        Assertions.assertEquals("Kobieta", person.getName());
+        Assertions.assertEquals("Green", person.getSurname());
+        Assertions.assertEquals(32, person.getAge());
+        Assertions.assertEquals('F', person.getGender());
+    }
+    @Test
     public void shouldCreatePersonBasedAllParameters(){
         Person person = personCreator.make("Janek", "Green", 32, 'M');
         Assertions.assertEquals("Janek", person.getName());
