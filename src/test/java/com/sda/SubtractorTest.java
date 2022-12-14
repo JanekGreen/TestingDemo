@@ -12,6 +12,7 @@ public class SubtractorTest {
        int result = subtractor.subtract(5, 3);
        //then
         Assertions.assertEquals(2, result);
+        Assertions.assertNotEquals(3, result);
 
     }
 }

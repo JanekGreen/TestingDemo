@@ -22,7 +22,7 @@ public class AssertionsExamples {
         Assertions.assertArrayEquals(new int[]{1},new int[]{1});
         Assertions.assertIterableEquals(Arrays.asList(1), Arrays.asList(1));
         Assertions.assertSame("ala", "ala");
-        Assertions.assertNotSame("ala", new String("ala"));
+        Assertions.assertNotSame("ala", "ala");
 
     }
 }
