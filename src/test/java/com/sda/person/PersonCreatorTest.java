@@ -22,7 +22,8 @@ class PersonCreatorTest {
         Assertions.assertEquals(32, person.getAge());
         Assertions.assertEquals('F', person.getGender());
     }
-    @Test
+    @Disabled("test zostanie włączony po naprawieniu -identyfikator taska")
+    @Test // trzeba mieć dobry powód by wyłączyć test. Np znany bug na który jest ticket
     public void shouldCreatePersonBasedAllParameters(){
         Person person = personCreator.make("Janek", "Green", 32, 'M');
         Assertions.assertEquals("Janek", person.getName());
