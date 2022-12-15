@@ -9,6 +9,9 @@ public class GradeCalculator {
      * 49  - 0  % ndst
      * */
     String calculate(int percentage) {
+        if (percentage < 0 || percentage > 100) {
+           return "Error. Percentage out of range!";
+        }
         if (percentage >= 90) {
             return "bdb";
         }
